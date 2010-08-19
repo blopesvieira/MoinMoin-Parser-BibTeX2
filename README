@@ -1,0 +1,9 @@
+MoinMoin BibTeX2 Parser
+
+MoinMoin processor for BibTeX entries.
+
+Copyright (C) 2004-2007 Jun Hu <j.hu@tue.nl>
+
+Copyright (C) 2004 Alexandre Duret-Lutz <adl@gnu.org>
+
+Copyright (C) 2010 Bruno Lopes http://www.tecmf.inf.puc-rio.br/BrunoLopes
