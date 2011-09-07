@@ -1,5 +1,5 @@
 """
-= BibTeX Parser (version 1.5.2) =
+= BibTeX Parser (version 1.5.3) =
 
 MoinMoin processor for [http://www.bibtex.org BibTeX] entries.
 
@@ -7,7 +7,7 @@ Copyright (C) 2004-2007 Jun Hu <j.hu@tue.nl>
 
 Copyright (C) 2004  Alexandre Duret-Lutz <adl@gnu.org>
 
-Copyright (C) 2010 Bruno Lopes <blopesvieira@gmail.com>
+Copyright (C) 2010-2011 Bruno Lopes <blopesvieira@gmail.com>
 
 This module is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -136,6 +136,10 @@ for example:
 
             
 == Revision history ==
+
+ 1.5.3 By BrunoLopes
+       Support to lower-case BibTeX style file names.
+
  1.5.2 By BrunoLopes
        Support to MoinMoin up to 1.9.
 
@@ -263,7 +267,7 @@ class Parser:
         self.out     = kw.get('out', request)
         attrs, msg   = wikiutil.parseAttributes(request, kw.get('format_args',''))
 
-        self.style   = attrs.get('style','"plain"')[1:-1].lower()
+        self.style   = attrs.get('style','"plain"')[1:-1]
         self.hlinsdb = attrs.get('hlinsdb','"HlinsDatabase"')[1:-1]
 
         self.abstract = self.keywords = self.usekeys = True
